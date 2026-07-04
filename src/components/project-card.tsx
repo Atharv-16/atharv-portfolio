@@ -2,14 +2,14 @@
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { assetUrl } from "@/lib/assets";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import Markdown from "react-markdown";
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
-  const base = import.meta.env.BASE_URL;
-  const resolvedSrc = src.startsWith("http") ? src : `${base}${src.replace(/^\//, "")}`;
+  const resolvedSrc = assetUrl(src);
 
   if (!src || imageError) {
     return <div className="w-full h-48 bg-muted" />;

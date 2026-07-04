@@ -18,6 +18,9 @@ import { Golang } from "@/components/ui/svgs/golang";
 import { Astro } from "@/components/ui/svgs/astro";
 import { Java } from "@/components/ui/svgs/java";
 
+const raw = (path: string) =>
+  `https://raw.githubusercontent.com/Atharv-16/atharv-portfolio/main/public/${path}`;
+
 const ghImage = (repo: string) =>
   `https://opengraph.githubassets.com/1/Atharv-16/${repo}`;
 
@@ -31,8 +34,8 @@ export const DATA = {
     "AI Scientist building at the intersection of generative AI, computer vision, and robotics.",
   summary:
     "I'm an **AI Scientist at Navi** and an Electrical Engineering graduate from **IIT (BHU) Varanasi**. I build production ML systems — GenAI pipelines, credit risk models, local LLM deployments — and robotics stacks with ROS, Jetson, and semantic segmentation.\n\nRecent work spans RAG PDF engines, multi-agent travel planners, autonomous vehicle prototypes, and public-sector robotics projects in railway inspection and embedded navigation.\n\n**Core stack:** Python, C++, PyTorch, TensorFlow, LangChain, ROS, OpenCV.",
-  avatarUrl: "/me.png",
-  ogImage: "/me.png",
+  avatarUrl: raw("me.png"),
+  ogImage: raw("me.png"),
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     work: { order: 2, enabled: true, heading: "Experience", presentLabel: "Present" },
@@ -205,7 +208,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/averera.png",
+      image: raw("projects/averera.png"),
       video: "",
     },
     {
@@ -259,7 +262,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/projects/lidar.png",
+      image: raw("projects/lidar.png"),
       video: "",
     },
   ],
