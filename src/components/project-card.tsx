@@ -21,6 +21,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
       alt={alt}
       className="w-full h-48 object-cover"
       loading="lazy"
+      referrerPolicy="no-referrer"
       onError={() => setImageError(true)}
     />
   );

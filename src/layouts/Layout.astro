@@ -23,11 +23,10 @@ const {
 const pageTitle = title
   ? CONFIG.seo.titleTemplate.replace("%s", title).replace("%n", DATA.name)
   : DATA.name;
-const ogImage = image
-  ? image.startsWith("http")
-    ? image
-    : `${CONFIG.site.url}${image}`
-  : `${CONFIG.site.url}${DATA.ogImage}`;
+const resolveOgImage = (src: string) =>
+  src.startsWith("http") ? src : `${CONFIG.site.url}${src}`;
+
+const ogImage = image ? resolveOgImage(image) : resolveOgImage(DATA.ogImage);
 
 const { light, dark, radius } = CONFIG.theme;
 const { baseFontSize } = CONFIG.typography;
