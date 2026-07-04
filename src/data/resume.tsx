@@ -13,6 +13,13 @@ import { Docker } from "@/components/ui/svgs/docker";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
+import { Postgresql } from "@/components/ui/svgs/postgresql";
+import { Golang } from "@/components/ui/svgs/golang";
+import { Astro } from "@/components/ui/svgs/astro";
+import { Java } from "@/components/ui/svgs/java";
+
+const ghImage = (repo: string) =>
+  `https://opengraph.githubassets.com/1/Atharv-16/${repo}`;
 
 export const DATA = {
   name: "Atharv Gaur",
@@ -23,9 +30,9 @@ export const DATA = {
   description:
     "AI Scientist building at the intersection of generative AI, computer vision, and robotics.",
   summary:
-    "I'm an **AI Scientist at Navi** and an Electrical Engineering graduate from **IIT (BHU) Varanasi**. I build production ML systems — GenAI pipelines, credit risk models, local LLM deployments — and robotics stacks with ROS, Jetson, and semantic segmentation.\n\nI've shipped work for the **Ministry of Railways** (AI defect detection with ResNet + ROS) and **Ministry of Science & Technology** (U-Net on NVIDIA Jetson). Recent side projects include RAG PDF engines, multi-agent travel planners, and autonomous vehicle prototypes.\n\n**Core stack:** Python, C++, PyTorch, TensorFlow, LangChain, ROS, OpenCV.",
+    "I'm an **AI Scientist at Navi** and an Electrical Engineering graduate from **IIT (BHU) Varanasi**. I build production ML systems — GenAI pipelines, credit risk models, local LLM deployments — and robotics stacks with ROS, Jetson, and semantic segmentation.\n\nRecent work spans RAG PDF engines, multi-agent travel planners, autonomous vehicle prototypes, and public-sector robotics projects in railway inspection and embedded navigation.\n\n**Core stack:** Python, C++, PyTorch, TensorFlow, LangChain, ROS, OpenCV.",
   avatarUrl: "/me.png",
-  ogImage: "/og_image.png",
+  ogImage: "/me.png",
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     work: { order: 2, enabled: true, heading: "Experience", presentLabel: "Present" },
@@ -61,13 +68,21 @@ export const DATA = {
   photos: [],
   skills: [
     { name: "Python", icon: Python },
+    { name: "C++", icon: Java },
     { name: "TypeScript", icon: Typescript },
     { name: "PyTorch", icon: Python },
     { name: "TensorFlow", icon: Python },
     { name: "LangChain", icon: Nodejs },
+    { name: "LLMs / RAG", icon: Nodejs },
     { name: "ROS", icon: Kubernetes },
     { name: "OpenCV", icon: ReactLight },
+    { name: "Computer Vision", icon: ReactLight },
     { name: "Docker", icon: Docker },
+    { name: "PostgreSQL", icon: Postgresql },
+    { name: "React", icon: ReactLight },
+    { name: "FastAPI", icon: Python },
+    { name: "Git", icon: Astro },
+    { name: "Linux", icon: Golang },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
@@ -81,6 +96,12 @@ export const DATA = {
     email: "atharv.gaur16@gmail.com",
     tel: "+91 900-931-2691",
     social: {
+      Portfolio: {
+        name: "Portfolio",
+        url: "https://atharv-16.github.io/atharv-portfolio",
+        icon: Icons.globe,
+        navbar: true,
+      },
       GitHub: {
         name: "GitHub",
         url: "https://github.com/Atharv-16",
@@ -116,34 +137,10 @@ export const DATA = {
       location: "India",
       title: "AI Scientist",
       logoUrl: "https://www.google.com/s2/favicons?domain=navi.com&sz=128",
-      start: "2024",
+      start: "2025",
       end: undefined,
       description:
         "Built a Generative AI hindsighting pipeline for credit journeys, enhanced ML models for credit risk assessment, and engineered a local LLM deployment service using PyTorch, LangChain, and production ML tooling.",
-    },
-    {
-      company: "Ministry of Railways",
-      href: "https://indianrailways.gov.in",
-      badges: ["Public sector"],
-      location: "India",
-      title: "AI Engineer",
-      logoUrl: "https://avatar.vercel.sh/railways?size=40",
-      start: "2023",
-      end: "2024",
-      description:
-        "Developed an AI-powered defect detection system for railway track inspection using ResNet and ROS, improving inspection accuracy and reducing manual review load.",
-    },
-    {
-      company: "Ministry of Science & Technology",
-      href: "https://dst.gov.in",
-      badges: ["Public sector"],
-      location: "India",
-      title: "Robotics & CV Engineer",
-      logoUrl: "https://avatar.vercel.sh/most?size=40",
-      start: "2023",
-      end: "2024",
-      description:
-        "Implemented and deployed a U-Net model for real-time semantic segmentation on NVIDIA Jetson for autonomous navigation in embedded robotics pipelines.",
     },
   ],
   education: [
@@ -152,8 +149,8 @@ export const DATA = {
       href: "https://iitbhu.ac.in",
       degree: "B.Tech, Electrical Engineering",
       logoUrl: "https://www.google.com/s2/favicons?domain=iitbhu.ac.in&sz=128",
-      start: "2019",
-      end: "2023",
+      start: "2021",
+      end: "2025",
     },
   ],
   projects: [
@@ -172,7 +169,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: ghImage("Knowledge-Agentic-AI-with-RAG-Advanced-PDF-Query-Engine-"),
       video: "",
     },
     {
@@ -190,7 +187,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: ghImage("AI-Business-Intelligence-Agent-Smart-Dashboards-for-Decision-Making"),
       video: "",
     },
     {
@@ -208,7 +205,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/averera.png",
       video: "",
     },
     {
@@ -226,7 +223,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: ghImage("Health_Dashboard"),
       video: "",
     },
     {
@@ -244,7 +241,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: ghImage("Travel_Planner"),
       video: "",
     },
     {
@@ -262,7 +259,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/lidar.png",
       video: "",
     },
   ],

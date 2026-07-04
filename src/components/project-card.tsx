@@ -8,6 +8,8 @@ import Markdown from "react-markdown";
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
+  const base = import.meta.env.BASE_URL;
+  const resolvedSrc = src.startsWith("http") ? src : `${base}${src.replace(/^\//, "")}`;
 
   if (!src || imageError) {
     return <div className="w-full h-48 bg-muted" />;
@@ -15,9 +17,10 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
 
   return (
     <img
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       className="w-full h-48 object-cover"
+      loading="lazy"
       onError={() => setImageError(true)}
     />
   );
