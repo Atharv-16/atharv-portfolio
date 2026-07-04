@@ -14,8 +14,8 @@ interface DockIconProps {
   children?: ReactNode;
 }
 
-const DEFAULT_MAGNIFICATION = 60;
-const DEFAULT_DISTANCE = 100;
+const DEFAULT_MAGNIFICATION = 48;
+const DEFAULT_DISTANCE = 80;
 const BASE_SIZE = 40;
 const BASE_ICON_SIZE = 20;
 const ICON_SIZE_RATIO = 0.5;
@@ -37,7 +37,7 @@ const Dock = ({ className, children, magnification = DEFAULT_MAGNIFICATION, dist
       <motion.div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className={cn("mx-auto w-max h-full flex items-end justify-center overflow-visible rounded-full border", className)}
+        className={cn("mx-auto w-max min-h-14 h-auto flex items-center justify-center overflow-visible rounded-full border", className)}
       >
         {children}
       </motion.div>

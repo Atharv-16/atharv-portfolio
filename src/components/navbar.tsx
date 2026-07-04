@@ -19,8 +19,8 @@ export default function Navbar() {
   };
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30 pb-[env(safe-area-inset-bottom)]">
-      <Dock className="z-50 pointer-events-auto relative h-14 p-2 w-fit max-w-[calc(100vw-1.5rem)] mx-auto flex gap-1.5 sm:gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5 overflow-x-auto">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 overflow-visible pb-4 pt-10">
+      <Dock className="z-50 pointer-events-auto relative min-h-14 h-auto py-1.5 w-fit max-w-[calc(100vw-1.5rem)] mx-auto flex gap-1.5 sm:gap-2 border bg-card/90 backdrop-blur-3xl shadow-[0_0_10px_3px] shadow-primary/5 overflow-visible">
         {DATA.navbar.map((item) => {
           const isExternal = item.href.startsWith("http");
           const href = isExternal ? item.href : resolveHref(item.href);
