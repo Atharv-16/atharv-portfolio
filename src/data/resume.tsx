@@ -65,7 +65,7 @@ export const DATA = {
       enabled: true,
       label: "Contact",
       heading: "Get in touch",
-      text: "Open to collaborations, interesting problems, and conversations about AI and robotics.",
+      text: "Open to full-time roles, collaborations, and interesting problems in AI and robotics.",
     },
   },
   photos: [],
