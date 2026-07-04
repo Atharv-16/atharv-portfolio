@@ -65,7 +65,7 @@ export const DATA = {
       enabled: true,
       label: "Contact",
       heading: "Get in touch",
-      text: "Open to collaborations, interesting problems, and conversations about AI and robotics. Email or connect on LinkedIn.",
+      text: "Open to collaborations, interesting problems, and conversations about AI and robotics.",
     },
   },
   photos: [],
@@ -102,8 +102,7 @@ export const DATA = {
     { href: "#contact", icon: Mail, label: "Contact" },
   ],
   contact: {
-    email: "atharv.gaur16@gmail.com",
-    tel: "+91 900-931-2691",
+    email: "atharv.gaur.cd.eee21@iitbhu.ac.in",
     social: {
       Portfolio: {
         name: "Portfolio",
@@ -122,18 +121,6 @@ export const DATA = {
         url: "https://www.linkedin.com/in/atharv-gaur",
         icon: Icons.linkedin,
         navbar: true,
-      },
-      Resume: {
-        name: "Resume",
-        url: "https://drive.google.com/file/d/17IMh-cu58cxF8O04Y_ivK5hhQVjBzfBm/view?usp=drive_link",
-        icon: Icons.globe,
-        navbar: false,
-      },
-      email: {
-        name: "Email",
-        url: "mailto:atharv.gaur16@gmail.com",
-        icon: Icons.email,
-        navbar: false,
       },
     },
   },

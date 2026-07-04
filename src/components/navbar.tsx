@@ -1,4 +1,5 @@
 import { Dock, DockIcon } from "@/components/magicui/dock";
+import { useCopyEmail } from "@/components/copy-email";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -8,9 +9,11 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
+import { Check, Mail } from "lucide-react";
 
 export default function Navbar() {
   const base = import.meta.env.BASE_URL;
+  const { copied, handleCopy } = useCopyEmail();
 
   const resolveHref = (href: string) => {
     if (href.startsWith("#")) return `${base.replace(/\/$/, "")}/${href}`;
@@ -81,6 +84,27 @@ export default function Navbar() {
               </Tooltip>
             );
           })}
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button type="button" onClick={handleCopy}>
+              <DockIcon className="rounded-3xl cursor-pointer size-full bg-background p-0 text-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors">
+                {copied ? (
+                  <Check className="size-full rounded-sm" />
+                ) : (
+                  <Mail className="size-full rounded-sm" />
+                )}
+              </DockIcon>
+            </button>
+          </TooltipTrigger>
+          <TooltipContent
+            side="top"
+            sideOffset={8}
+            className="rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+          >
+            <p>{copied ? "Copied!" : "Copy email"}</p>
+            <TooltipArrow className="fill-primary" />
+          </TooltipContent>
+        </Tooltip>
         <Separator
           orientation="vertical"
           className="h-2/3 m-auto w-px bg-border"

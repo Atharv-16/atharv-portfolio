@@ -1,10 +1,12 @@
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Button } from "@/components/ui/button";
+import { CopyEmailPill } from "@/components/copy-email";
 import { DATA } from "@/data/resume";
-import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactSection() {
-  const socialLinks = Object.entries(DATA.contact.social);
+  const socialLinks = Object.entries(DATA.contact.social).filter(
+    ([, social]) => social.navbar
+  );
 
   return (
     <div className="border rounded-xl p-10 relative">
@@ -34,26 +36,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
-          <a
-            href={`mailto:${DATA.contact.email}`}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 hover:bg-muted transition-colors"
-          >
-            <Mail className="size-4" />
-            {DATA.contact.email}
-          </a>
-          <a
-            href={`tel:${DATA.contact.tel.replace(/\s/g, "")}`}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 hover:bg-muted transition-colors"
-          >
-            <Phone className="size-4" />
-            {DATA.contact.tel}
-          </a>
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2">
-            <MapPin className="size-4" />
-            {DATA.location}
-          </span>
-        </div>
+        <CopyEmailPill />
 
         <div className="flex flex-wrap items-center justify-center gap-3">
           {socialLinks.map(([name, social]) => {
