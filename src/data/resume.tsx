@@ -177,12 +177,18 @@ export const DATA = {
     {
       title: "AI Business Intelligence Agent",
       href: "https://github.com/Atharv-16/AI-Business-Intelligence-Agent-Smart-Dashboards-for-Decision-Making",
+      demo: "https://ai-business-intelligence-agent.streamlit.app",
       dates: "2025",
       active: true,
       description:
         "Agent-driven dashboards for data analysis, visualization, and decision support using LLM tooling.",
       technologies: ["Python", "Agents", "Dashboards", "ML"],
       links: [
+        {
+          type: "Live",
+          href: "https://ai-business-intelligence-agent.streamlit.app",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Source",
           href: "https://github.com/Atharv-16/AI-Business-Intelligence-Agent-Smart-Dashboards-for-Decision-Making",
@@ -213,12 +219,18 @@ export const DATA = {
     {
       title: "Health Dashboard",
       href: "https://github.com/Atharv-16/Health_Dashboard",
+      demo: "https://health-dashboard-atharv.streamlit.app",
       dates: "2025",
       active: true,
       description:
         "TypeScript health tracking app with wearable data sync, interactive charts, and responsive Material UI.",
       technologies: ["TypeScript", "React", "Vite", "Chart.js"],
       links: [
+        {
+          type: "Live",
+          href: "https://health-dashboard-atharv.streamlit.app",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Source",
           href: "https://github.com/Atharv-16/Health_Dashboard",
@@ -231,12 +243,18 @@ export const DATA = {
     {
       title: "Travel Planner (Multi-Agent)",
       href: "https://github.com/Atharv-16/Travel_Planner",
+      demo: "https://travel-planner-atharv.streamlit.app",
       dates: "2025",
       active: true,
       description:
         "Multi-agent travel planning system using Gemini and LangChain for itinerary generation and tool use.",
       technologies: ["Python", "LangChain", "Gemini", "Agents"],
       links: [
+        {
+          type: "Live",
+          href: "https://travel-planner-atharv.streamlit.app",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Source",
           href: "https://github.com/Atharv-16/Travel_Planner",
