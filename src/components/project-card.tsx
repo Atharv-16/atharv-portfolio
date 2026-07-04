@@ -30,6 +30,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
 interface Props {
   title: string;
   href?: string;
+  demo?: string;
   description: string;
   dates: string;
   tags: readonly string[];
@@ -46,6 +47,7 @@ interface Props {
 export function ProjectCard({
   title,
   href,
+  demo,
   description,
   dates,
   tags,
@@ -54,7 +56,7 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
-  const projectUrl = href || "#";
+  const projectUrl = demo || href || "#";
 
   return (
     <div

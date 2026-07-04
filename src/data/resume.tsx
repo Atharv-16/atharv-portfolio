@@ -153,12 +153,18 @@ export const DATA = {
     {
       title: "Knowledge Agentic AI (RAG)",
       href: "https://github.com/Atharv-16/Knowledge-Agentic-AI-with-RAG-Advanced-PDF-Query-Engine-",
+      demo: "https://knowledge-agentic-ai-with-rag-advanced-pdf-query-engine.streamlit.app",
       dates: "2025",
       active: true,
       description:
         "Advanced PDF query engine with retrieval-augmented generation for document Q&A and agentic workflows.",
       technologies: ["Python", "LangChain", "RAG", "LLM", "FastAPI"],
       links: [
+        {
+          type: "Live",
+          href: "https://knowledge-agentic-ai-with-rag-advanced-pdf-query-engine.streamlit.app",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Source",
           href: "https://github.com/Atharv-16/Knowledge-Agentic-AI-with-RAG-Advanced-PDF-Query-Engine-",
