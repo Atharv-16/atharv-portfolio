@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { DATA } from "@/data/resume";
 import { CONFIG } from "@/data/config";
 import NavbarIsland from "@/components/NavbarIsland";
+import Analytics from "@/components/Analytics.astro";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
 interface Props {
@@ -34,6 +35,7 @@ const { baseFontSize } = CONFIG.typography;
 
 <html
   lang={CONFIG.site.locale.split("_")[0]}
+  class="scroll-smooth"
   style={`font-size: ${baseFontSize}%;`}
 >
   <head>
@@ -136,6 +138,8 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <Analytics />
   </head>
   <body class="min-h-screen bg-background font-sans antialiased relative">
     <!-- FlickeringGrid header background - matches template exactly -->

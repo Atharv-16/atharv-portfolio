@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
@@ -19,12 +18,12 @@ const prettyCodeOptions = {
   keepBackground: false,
 };
 
-// https://astro.build/config
+const base = process.env.PUBLIC_BASE_PATH ?? '/atharv-portfolio';
+
 export default defineConfig({
   site: CONFIG.site.url,
-  output: 'server',
-
-  adapter: cloudflare(),
+  base,
+  output: 'static',
 
   vite: {
     plugins: [tailwindcss()],
