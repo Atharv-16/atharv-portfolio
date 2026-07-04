@@ -108,12 +108,12 @@ const { baseFontSize } = CONFIG.typography;
     `}
     ></style>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href={assetUrl("favicon.svg")} />
-    <link rel="icon" type="image/png" sizes="32x32" href={assetUrl("favicon-32.png")} />
-    <link rel="icon" type="image/png" sizes="16x16" href={assetUrl("favicon-16.png")} />
-    <link rel="shortcut icon" href={assetUrl("favicon.ico")} />
-    <link rel="apple-touch-icon" sizes="180x180" href={assetUrl("apple-touch-icon.png")} />
+    <!-- Favicon (ag.* filenames bust browser cache of old green icon) -->
+    <link rel="icon" type="image/svg+xml" href={assetUrl("ag.svg")} />
+    <link rel="icon" type="image/png" sizes="32x32" href={assetUrl("ag-32.png")} />
+    <link rel="icon" type="image/png" sizes="16x16" href={assetUrl("ag-16.png")} />
+    <link rel="shortcut icon" href={assetUrl("ag.ico")} />
+    <link rel="apple-touch-icon" sizes="180x180" href={assetUrl("ag-touch.png")} />
 
     <!-- Primary meta -->
     <title>{pageTitle}</title>
