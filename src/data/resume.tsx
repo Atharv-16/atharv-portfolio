@@ -104,12 +104,6 @@ export const DATA = {
   contact: {
     email: "atharv.gaur.cd.eee21@iitbhu.ac.in",
     social: {
-      Portfolio: {
-        name: "Portfolio",
-        url: "https://atharv-16.github.io/atharv-portfolio",
-        icon: Icons.globe,
-        navbar: true,
-      },
       GitHub: {
         name: "GitHub",
         url: "https://github.com/Atharv-16",
