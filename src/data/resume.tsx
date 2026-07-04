@@ -153,7 +153,7 @@ export const DATA = {
     {
       title: "Knowledge Agentic AI (RAG)",
       href: "https://github.com/Atharv-16/Knowledge-Agentic-AI-with-RAG-Advanced-PDF-Query-Engine-",
-      demo: "https://knowledge-agentic-ai-with-rag-advanced-pdf-query-engine.streamlit.app",
+      demo: "https://bsvefp4ulm5pifwgplpszg.streamlit.app",
       dates: "2025",
       active: true,
       description:
@@ -162,7 +162,7 @@ export const DATA = {
       links: [
         {
           type: "Live",
-          href: "https://knowledge-agentic-ai-with-rag-advanced-pdf-query-engine.streamlit.app",
+          href: "https://bsvefp4ulm5pifwgplpszg.streamlit.app",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -177,18 +177,12 @@ export const DATA = {
     {
       title: "AI Business Intelligence Agent",
       href: "https://github.com/Atharv-16/AI-Business-Intelligence-Agent-Smart-Dashboards-for-Decision-Making",
-      demo: "https://ai-business-intelligence-agent.streamlit.app",
       dates: "2025",
       active: true,
       description:
         "Agent-driven dashboards for data analysis, visualization, and decision support using LLM tooling.",
       technologies: ["Python", "Agents", "Dashboards", "ML"],
       links: [
-        {
-          type: "Live",
-          href: "https://ai-business-intelligence-agent.streamlit.app",
-          icon: <Icons.globe className="size-3" />,
-        },
         {
           type: "Source",
           href: "https://github.com/Atharv-16/AI-Business-Intelligence-Agent-Smart-Dashboards-for-Decision-Making",
@@ -219,18 +213,12 @@ export const DATA = {
     {
       title: "Health Dashboard",
       href: "https://github.com/Atharv-16/Health_Dashboard",
-      demo: "https://health-dashboard-atharv.streamlit.app",
       dates: "2025",
       active: true,
       description:
         "TypeScript health tracking app with wearable data sync, interactive charts, and responsive Material UI.",
       technologies: ["TypeScript", "React", "Vite", "Chart.js"],
       links: [
-        {
-          type: "Live",
-          href: "https://health-dashboard-atharv.streamlit.app",
-          icon: <Icons.globe className="size-3" />,
-        },
         {
           type: "Source",
           href: "https://github.com/Atharv-16/Health_Dashboard",
@@ -243,7 +231,7 @@ export const DATA = {
     {
       title: "Travel Planner (Multi-Agent)",
       href: "https://github.com/Atharv-16/Travel_Planner",
-      demo: "https://travel-planner-atharv.streamlit.app",
+      demo: "https://travelplanner-by9nwvxnke8i6fjdjq57o8.streamlit.app",
       dates: "2025",
       active: true,
       description:
@@ -252,7 +240,7 @@ export const DATA = {
       links: [
         {
           type: "Live",
-          href: "https://travel-planner-atharv.streamlit.app",
+          href: "https://travelplanner-by9nwvxnke8i6fjdjq57o8.streamlit.app",
           icon: <Icons.globe className="size-3" />,
         },
         {
